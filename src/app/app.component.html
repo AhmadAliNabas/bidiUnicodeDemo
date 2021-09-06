@@ -1,11 +1,9 @@
 <div class="container">
   <div class="text-area">
-    <nz-select (ngModelChange)="updateInputValue()" [(ngModel)]="selectedText">
+    <nz-select [(ngModel)]="selectedText" (ngModelChange)="updateInputValue()">
       <nz-option *ngFor="let text of texts" [nzLabel]="text| HtmlDecoderPipe" [nzValue]="text"
       ></nz-option>
     </nz-select>
-
-
     <nz-form-label>Preview</nz-form-label>
     <div class="preview-box">
       <p [dir]="dir">
