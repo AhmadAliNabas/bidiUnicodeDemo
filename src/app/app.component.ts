@@ -23,9 +23,9 @@ export class AppComponent implements OnInit {
   preview = '';
   dir: Direction = 'ltr';
   unicodeArr: Unicode[] = [
-    // {abbreviation: 'LRE', code: '\u202A', description: 'Left to Right Embedding'},
-    // {abbreviation: 'RLE', code: '\u202B', description: 'Right to Left Embedding'},
-    // {abbreviation: 'PDF', code: '\u200C', description: 'Pop Directional Formatting (ending an embedding)'},
+    {abbreviation: 'LRE', code: '\u202A', description: 'Left to Right Embedding'},
+    {abbreviation: 'RLE', code: '\u202B', description: 'Right to Left Embedding'},
+    {abbreviation: 'PDF', code: '\u200C', description: 'Pop Directional Formatting (ending an embedding)'},
     {abbreviation: 'LRI', code: '\u2066', description: 'Left to Right Isolate'},
     {abbreviation: 'RLI', code: '\u2067', description: 'Right to Left Isolate'},
     {abbreviation: 'FSI', code: '\u2068', description: 'First Strong Isolate'},

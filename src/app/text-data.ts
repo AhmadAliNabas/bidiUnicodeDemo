@@ -1,5 +1,7 @@
 export const textArr = [
   "The title is البحرين مصر الكويت! in Arabic.",
+  "1 × 2 × 3  سم",
+  "4 × 5 × 6 سم",
   "The title is \u2067\u0627\u0644\u0628\u062d\u0631\u064a\u0646 \u0645\u0635\u0631 \u0627\u0644\u0643\u0648\u064a\u062a!\u2069\ in Arabic.",
   "&#x0645;&#x0627; &#x0647;&#x0648; &#x202A;C++&#x202C;&#x200F;&#x061F; (Arabic Edition)",
   "The quick brown fox jumped over the lazy dog.",

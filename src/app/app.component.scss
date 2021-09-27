@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
+    min-width: 50%;
   }
 
   .table-area {
@@ -28,8 +28,10 @@ nz-select {
 
 .unicode-buttons-group {
   display: flex;
+  flex-wrap: wrap;
 
   button {
     margin-right: 10px;
+    margin-top: 10px;
   }
 }
