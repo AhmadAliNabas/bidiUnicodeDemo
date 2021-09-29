@@ -1,1 +1,44 @@
-<p>solution2 works!</p>
+<div class="container">
+  <div class="text-area">
+    <nz-select [(ngModel)]="selectedText" (ngModelChange)="updateInputValue()">
+      <nz-option *ngFor="let text of texts" [nzLabel]="text| HtmlDecoderPipe" [nzValue]="text"
+      ></nz-option>
+    </nz-select>
+    <nz-form-label>Preview</nz-form-label>
+    <div class="preview-box">
+      <p [dir]="dir">
+        {{he.decode(inputValue)}}
+      </p>
+    </div>
+    <nz-form-label>Direction</nz-form-label>
+    <!--  Direction Radio Group -->
+    <nz-radio-group [(ngModel)]="dir">
+      <label *ngFor="let dir of directions" [nzValue]="dir" nz-radio>{{dir}}</label>
+    </nz-radio-group>
+    <br/>
+
+
+    <!--  Unicode Buttons -->
+        <div class="unicode-buttons-group">
+          <button (click)="addField()" nz-button nzType="primary">Add Field</button>
+          <button (click)="updatePreview()" nz-button nzType="primary">Update Preview</button>
+    <!--      <button (click)="onUnicodeButtonClick(unicode)" *ngFor="let unicode of unicodeArr" nz-button nzType="default">-->
+    <!--        &lt;!&ndash;          [nzTooltipTitle]="unicode.description" nzTooltipPlacement="top" nz-tooltip&ndash;&gt;-->
+    <!--        {{unicode.abbreviation}}-->
+    <!--      </button>-->
+    <!--      <button (click)="undoUnicode(lastAddedUnicode)" nz-button nzType="primary">Undo</button>-->
+    <!--      <button (click)="onResetButtonClick()" nz-button nzType="primary">Reset</button>-->
+        </div>
+    <br/>
+    <nz-form-label>Edit Text Here</nz-form-label>
+    <div *ngFor="let field of fields" class="fields-container">
+      <input (ngModelChange)="onChange(field.inputValue)" [(ngModel)]="field.inputValue"
+             nz-input>
+      <nz-radio-group [(ngModel)]="field.dir">
+        <label *ngFor="let dir of directions" [nzValue]="dir" nz-radio>{{dir}}</label>
+      </nz-radio-group>
+    </div>
+
+  </div>
+
+</div>
