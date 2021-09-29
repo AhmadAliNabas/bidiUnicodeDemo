@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  UndoUnicode(lastAddedUnicode: string) {
+  undoUnicode(lastAddedUnicode: string) {
     this.inputValue = he.decode(he.encode(this.inputValue).replace(lastAddedUnicode, ""));
     this.inputValue = _.cloneDeep(he.decode(this.inputValue));
   }
@@ -58,8 +58,6 @@ export class HomeComponent implements OnInit {
   onUnicodeButtonClick(unicode: Unicode) {
     this.inputValue = this.insertAt(this.selectionStart, this.inputValue, unicode.code);
     this.lastAddedUnicode = he.encode(unicode.code);
-    console.log('decode', he.decode(this.inputValue));
-    console.log('encode', he.encode(this.inputValue));
   }
 
   onResetButtonClick() {
