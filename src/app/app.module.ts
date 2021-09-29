@@ -14,13 +14,19 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
 import { HtmlDecoderPipePipe } from './html-decoder.pipe';
+import { Solution1Component } from './solution1/solution1.component';
+import { Solution2Component } from './solution2/solution2.component';
+import { HomeComponent } from './home/home.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HtmlDecoderPipePipe
+    HtmlDecoderPipePipe,
+    Solution1Component,
+    Solution2Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
